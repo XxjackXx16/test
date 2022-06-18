@@ -1,4 +1,4 @@
-local HWIDTable = loadstring(game:HttpGet("https://pastebin.com/raw/Q24VAGx7"))()
+local HWIDTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/EZEZEZEZZE/whitelist2.json/main/lua2"))()
 local HWID =(game:GetService("RbxAnalyticsService"):GetClientId())
 for i,v in pairs(HWIDTable) do
 	print(v)
