@@ -119,5 +119,75 @@ for i,v in pairs(HWIDTable) do
 			end,
 			HoverText = "bedwars 2021 script"
 		})
+COB("World", {
+			Name = "flyv2",
+	Function = function(v)
+		longjumpval = v
+		if longjumpval then
+			workspace.Gravity = 0
+			spawn(function()
+				repeat
+					if (not longjumpval) then return end
+					lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+					wait(0.1)
+					lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+					wait(0.1)
+					lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Climbing)
+					wait(0.1)
+					lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+					wait(0.1)
+					lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+					wait(0.1)
+				until (not longjumpval)
+			end)
+		else
+			workspace.Gravity = 196.19999694824
+			return
+		end
+	end
+		})
+		
+		
+		COB("World", {
+			Name = "Blood",
+			Function = function(v)
+				if v then
+					game.Lighting.Ambient = Color3.fromRGB(255,0,0)
+					game.Lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+				else
+					game.Lighting.Ambient = Color3.fromRGB(91, 91, 91)
+					game.Lighting.OutdoorAmbient = Color3.fromRGB(201, 201, 201)
+				end
+			end
+		})
+		
+		
+		
+		COB("World", {
+			Name = "Ocean",
+			Function = function(v)
+				if v then
+					game.Lighting.Ambient = Color3.fromRGB(0,0,255)
+					game.Lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+				else
+					game.Lighting.Ambient = Color3.fromRGB(91, 91, 91)
+					game.Lighting.OutdoorAmbient = Color3.fromRGB(201, 201, 201)
+				end
+			end
+		})
+		
+		
+		COB("World", {
+			Name = "grass",
+			Function = function(v)
+				if v then
+					game.Lighting.Ambient = Color3.fromRGB(0,255,0)
+					game.Lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+				else
+					game.Lighting.Ambient = Color3.fromRGB(91, 91, 91)
+					game.Lighting.OutdoorAmbient = Color3.fromRGB(201, 201, 201)
+				end
+			end
+		})
 	end
 end
